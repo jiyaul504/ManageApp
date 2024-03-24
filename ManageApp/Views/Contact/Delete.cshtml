@@ -1,0 +1,49 @@
+﻿@model Contact
+
+<h2>Delete Contact</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Are you sure you want to delete this contact?</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>Name:</dt>
+                <dd>@Model.Name</dd>
+                <dt>Email:</dt>
+                <dd>@Model.Email</dd>
+                <dt>Phone:</dt>
+                <dd>@Model.Phone</dd>
+                <dt>Address:</dt>
+                <dd>@Model.Address</dd>
+            </dl>
+        </div>
+
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>City:</dt>
+                <dd>@Model.City</dd>
+                <dt>State:</dt>
+                <dd>@Model.State</dd>
+                <dt>Postal Code:</dt>
+                <dd>@Model.PostalCode</dd>
+                <dt>Country:</dt>
+                <dd>@Model.Country</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a asp-action="Index" class="btn btn-default">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@model Book
+
+<div class="container">
+    <h2>Delete Book</h2>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <p>@Model.Title</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Author" class="control-label"></label>
+                    <p>@Model.Author</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <p>@Model.Price</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-danger">Delete Book</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Optionally, you can include additional JavaScript logic here
+        });
+    </script>
+}
+
+<style>
+    .custom-width {
+        width: 100%; /* Set all fields to 100% width */
+    }
+</style>

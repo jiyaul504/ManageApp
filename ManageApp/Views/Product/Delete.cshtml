@@ -1,0 +1,32 @@
+﻿@model Product
+
+<div class="container border">
+    <h2>Delete Product</h2>
+    <p>Are you sure you want to delete this product?</p>
+    <dl class="row">
+        <dt class="col-sm-3">Name:</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Price:</dt>
+        <dd class="col-sm-9">@Model.Price</dd>
+
+        <dt class="col-sm-3">Description:</dt>
+        <dd class="col-sm-9">@Model.Description</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+
+
+<style>
+    .border {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+    }
+</style>
